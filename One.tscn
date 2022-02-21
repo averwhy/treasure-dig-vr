@@ -1,0 +1,69 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://One.gd" type="Script" id=2]
+[ext_resource path="res://OQ_Toolkit/OQ_LeftController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://OQ_Toolkit/OQ_RightController.tscn" type="PackedScene" id=4]
+[ext_resource path="res://OQ_Toolkit/OQ_ARVRCamera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://OQ_Toolkit/OQ_UI2D/OQ_UI2DLogWindow.tscn" type="PackedScene" id=6]
+[ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/Locomotion_Stick.tscn" type="PackedScene" id=7]
+[ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/Feature_Falling.tscn" type="PackedScene" id=8]
+[ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/Feature_Climbing.tscn" type="PackedScene" id=9]
+[ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/Feature_PlayerCollision.tscn" type="PackedScene" id=10]
+
+[sub_resource type="CubeMesh" id=2]
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.513411, 1, 0.503515 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 8.33695, 0.001, 8.11548 )
+
+[sub_resource type="CubeMesh" id=6]
+
+[node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0292063, 0.977416, 0.0245972 )
+script = ExtResource( 2 )
+
+[node name="OQ_ARVROrigin" parent="." instance=ExtResource( 1 )]
+
+[node name="OQ_ARVRCamera" parent="OQ_ARVROrigin" instance=ExtResource( 5 )]
+
+[node name="OQ_LeftController" parent="OQ_ARVROrigin" instance=ExtResource( 3 )]
+
+[node name="OQ_RightController" parent="OQ_ARVROrigin" instance=ExtResource( 4 )]
+
+[node name="Locomotion_Stick" parent="OQ_ARVROrigin" instance=ExtResource( 7 )]
+
+[node name="Feature_Falling" parent="OQ_ARVROrigin" instance=ExtResource( 8 )]
+
+[node name="Feature_Climbing" parent="OQ_ARVROrigin" instance=ExtResource( 9 )]
+
+[node name="Feature_PlayerCollision" parent="OQ_ARVROrigin" instance=ExtResource( 10 )]
+
+[node name="OQ_UI2DLogWindow" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.999999, -0.00145153, 0.000428377, 0.00124688, 0.950613, 0.310377, -0.000857744, -0.310376, 0.950613, 0.00378188, 1.22743, -2.22224 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 0.507516, 0, 0, 0, 1, 0, 0, 0, 0.504241, -0.00399923, 0, -2.51088 )
+mesh = SubResource( 2 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000123024, 0.00179148, -2.51107 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10109, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 1.00284, 0, 0, 0, 1.00284, 0, 0, 0, 1.00284, 0, 0, 0 )
+shape = SubResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
+transform = Transform( 8.34373, 0, 0, 0, -0.000624537, 0, 0, 0, 8.11494, 0, 0, 0 )
+mesh = SubResource( 6 )
+material/0 = null
