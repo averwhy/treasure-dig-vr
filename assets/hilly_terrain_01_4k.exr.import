@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hilly_terrain_01_4k.exr-8c543e073d55f2b74b463e00159d0eb3.stex"
+path="res://.import/hilly_terrain_01_4k.exr-db3e5cec6a71367c5c32ae49394f9f41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hilly_terrain_01_4k.exr"
-dest_files=[ "res://.import/hilly_terrain_01_4k.exr-8c543e073d55f2b74b463e00159d0eb3.stex" ]
+source_file="res://assets/hilly_terrain_01_4k.exr"
+dest_files=[ "res://.import/hilly_terrain_01_4k.exr-db3e5cec6a71367c5c32ae49394f9f41.stex" ]
 
 [params]
 
