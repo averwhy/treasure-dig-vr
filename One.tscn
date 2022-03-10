@@ -11,19 +11,18 @@
 [ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/Feature_Climbing.tscn" type="PackedScene" id=9]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/Feature_PlayerCollision.tscn" type="PackedScene" id=10]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_StaticGrab.tscn" type="PackedScene" id=11]
+[ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/scripts/Feature_PlayerCollision.gd" type="Script" id=12]
 
-[sub_resource type="CubeMesh" id=2]
-
-[sub_resource type="BoxShape" id=4]
-extents = Vector3( 0.513411, 1, 0.0251422 )
-
-[sub_resource type="BoxShape" id=5]
-extents = Vector3( 8.33695, 0.001, 8.11548 )
+[sub_resource type="BoxShape" id=9]
+extents = Vector3( 2.94898, 0.100974, 8.11548 )
 
 [sub_resource type="CubeMesh" id=6]
 
 [sub_resource type="SpatialMaterial" id=7]
 albedo_color = Color( 0.792157, 0.792157, 0.792157, 1 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 8.33695, 0.001, 8.11548 )
 
 [sub_resource type="SpatialMaterial" id=8]
 albedo_color = Color( 0.219608, 0.219608, 0.219608, 1 )
@@ -33,6 +32,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0292063, 32.3127, 0.0245972 
 script = ExtResource( 2 )
 
 [node name="OQ_ARVROrigin" parent="." instance=ExtResource( 1 )]
+script = ExtResource( 12 )
 
 [node name="OQ_ARVRCamera" parent="OQ_ARVROrigin" instance=ExtResource( 5 )]
 
@@ -53,40 +53,28 @@ script = ExtResource( 2 )
 [node name="Feature_PlayerCollision" parent="OQ_ARVROrigin" instance=ExtResource( 10 )]
 
 [node name="OQ_UI2DLogWindow" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.999999, -0.00145153, 0.000428377, 0.00124688, 0.950613, 0.310377, -0.000857744, -0.310376, 0.950613, 0.00378188, 1.22743, -2.22224 )
+transform = Transform( 3.87174, -0.00561995, 0.00165856, 0.00629038, 4.79575, 1.56582, -0.00417081, -1.50921, 4.62239, -0.0600173, 0.348572, -8.59184 )
 
-[node name="StaticBody" type="StaticBody" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 0.504908, 0, 0, 0, 0.992274, 0, 0, 0, 0.0236971, -0.00399923, 0, -2.12578 )
-mesh = SubResource( 2 )
-skeleton = NodePath("../..")
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00506264, -0.00722504, -2.12502 )
-shape = SubResource( 4 )
-
-[node name="StaticBody2" type="StaticBody" parent="."]
+[node name="SpawnPath" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.10109, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
-transform = Transform( 1.00284, 0, 0, 0, 1.00284, 0, 0, 0, 1.00284, 0, 0, 0 )
-shape = SubResource( 5 )
+[node name="CollisionShape" type="CollisionShape" parent="SpawnPath"]
+transform = Transform( 1.00284, 0, 0, 0, 1.00284, 0, 0, 0, 1.00284, -0.0139775, 0.0039196, 0.0100319 )
+shape = SubResource( 9 )
 
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
-transform = Transform( 8.34373, 0, 0, 0, -0.000624537, 0, 0, 0, 8.11494, 0, 0, 0 )
+[node name="MeshInstance" type="MeshInstance" parent="SpawnPath"]
+transform = Transform( 2.97088, 0, 0, 0, 0.098614, 0, 0, 0, 8.10902, 0, 0, 0 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
-[node name="StaticBody3" type="StaticBody" parent="."]
-transform = Transform( 23.1596, 0, 0, 0, 1.0042, 0, 0, 0, 23.7746, 0, -32.199, 0 )
+[node name="Baseplate" type="StaticBody" parent="."]
+transform = Transform( 88.8915, 0, 0, 0, 1.0042, 0, 0, 0, 93.2026, 0, -32.199, 0 )
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+[node name="CollisionShape" type="CollisionShape" parent="Baseplate"]
 transform = Transform( 1.00284, 0, 0, 0, 1.00284, 0, 0, 0, 1.00284, 0, 0, 0 )
 shape = SubResource( 5 )
 
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
-transform = Transform( 8.34373, 0, 0, 0, -0.000624537, 0, 0, 0, 8.11494, 0, 0, 0 )
+[node name="MeshInstance" type="MeshInstance" parent="Baseplate"]
+transform = Transform( 8.34373, 0, 0, 0, -0.000624537, 0, 0, 0, 8.11494, 0, -0.246713, 0 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 8 )
