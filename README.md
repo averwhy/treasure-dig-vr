@@ -18,4 +18,4 @@ The player digs down and is looking for chests that reward with a currency (TBD)
 ## How do i play?
 Currently, the game is unavailable. It's not quite in a working state. Once it is, it will be published on Oculus Quest App Labs and a link will be put here.
 
-Keep on eye on the 'App lab' badge to quickly know if the game is on app labs yet.
+Keep on eye on the 'App lab' badge to quickly know if the game is on app labs yet. It will also be linked in [the releases tab for this repo.](https://github.com/averwhy/treasure-dig-vr/releases)
