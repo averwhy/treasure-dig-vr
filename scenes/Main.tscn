@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://OQ_Toolkit/OQ_LeftController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRCamera.tscn" type="PackedScene" id=2]
@@ -11,6 +11,12 @@
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.197845, 0.202299, 0.202507 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.282353, 0.282353, 0.282353, 1 )
+
+[sub_resource type="CubeMesh" id=5]
+material = SubResource( 4 )
 
 [sub_resource type="BoxShape" id=2]
 extents = Vector3( 0.209852, 0.209351, 0.203405 )
@@ -41,6 +47,11 @@ transform = Transform( 65.642, 0, 0, 0, 1, 0, 0, 0, 61.9888, 0, 0.227377, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="Lower platform"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236724, 0 )
 shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Lower platform"]
+transform = Transform( 0.198438, 0, 0, 0, 0.239322, 0, 0, 0, 0.201777, 0.00012692, 0.239705, -0.0006818 )
+mesh = SubResource( 5 )
+material/0 = null
 
 [node name="Upper platform" type="StaticBody" parent="."]
 transform = Transform( 10.9737, 0, 0, 0, 0.210797, 0, 0, 0, 11.0206, 0, 195.918, 0 )
