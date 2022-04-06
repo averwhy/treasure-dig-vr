@@ -1,6 +1,6 @@
 ![Engine](https://img.shields.io/badge/engine-godot-427da9?style=flat-square&logo=godotengine)
 ![GitHub top language](https://img.shields.io/github/languages/top/averwhy/treasure-dig-vr?color=355570&style=flat-square)
-![GitHub](https://img.shields.io/github/license/averwhy/treasure-dig-vr?style=flat-square)
+![License](https://img.shields.io/github/license/averwhy/treasure-dig-vr?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/averwhy/treasure-dig-vr?style=flat-square)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/averwhy/treasure-dig-vr?style=flat-square)
 ![Maintenance](https://img.shields.io/maintenance/yes/2022?style=flat-square)
