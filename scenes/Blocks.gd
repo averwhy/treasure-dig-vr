@@ -28,6 +28,9 @@ func add_block(offset: Vector3, parent: Spatial = self):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	for i in range(100):
+		vr.log_warning("...")
+	
 	top_level_blocks = [
 		add_block(Vector3(0, 0, 0)),
 		add_block(Vector3(0, 0, -2)),
@@ -43,7 +46,7 @@ func _ready():
 	var iter = 0
 	var offset = -2.0
 	for block in top_level_blocks:
-		vr.show_dbg_info("blockpos", "%s" % block.translation.y + offset)
+		vr.log_info(block)
 		var new_block = add_block((block.translation.y + offset))
 		added_blocks.append(new_block)
 	loading_blocks = false
