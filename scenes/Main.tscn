@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://OQ_Toolkit/OQ_LeftController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRCamera.tscn" type="PackedScene" id=2]
@@ -10,53 +10,12 @@
 [ext_resource path="res://OQ_Toolkit/OQ_ARVROrigin/Locomotion_Stick.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Blocks.gd" type="Script" id=9]
 [ext_resource path="res://resources/roblox_wood.png" type="Texture" id=10]
-[ext_resource path="res://OQ_Toolkit/OQ_ARVRController/models3d/OculusQuest2/OculusQuest2TouchController_Left.gltf" type="PackedScene" id=11]
+[ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_Quest2ControllerModel_Right.tscn" type="PackedScene" id=11]
 [ext_resource path="res://resources/Wood.tres" type="Material" id=12]
 [ext_resource path="res://resources/roblox_grass.png" type="Texture" id=13]
 [ext_resource path="res://OQ_Toolkit/OQ_UI2D/OQ_UI2DLogWindow.tscn" type="PackedScene" id=14]
-[ext_resource path="res://OQ_Toolkit/OQ_ARVRController/models3d/OculusQuest2/OculusQuest2TouchController_Right.gltf" type="PackedScene" id=15]
-
-[sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.197845, 0.202299, 0.202507 )
-
-[sub_resource type="SpatialMaterial" id=4]
-albedo_color = Color( 0.282353, 0.282353, 0.282353, 1 )
-
-[sub_resource type="CubeMesh" id=5]
-material = SubResource( 4 )
-
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.209852, 0.209351, 0.188521 )
-
-[sub_resource type="CubeMesh" id=3]
-
-[sub_resource type="SpatialMaterial" id=17]
-albedo_texture = ExtResource( 10 )
-uv1_scale = Vector3( 15.941, 17.283, 1 )
-
-[sub_resource type="BoxShape" id=8]
-extents = Vector3( 3.36321, 0.0630218, 1 )
-
-[sub_resource type="CubeMesh" id=16]
-material = ExtResource( 12 )
-
-[sub_resource type="CubeMesh" id=13]
-material = ExtResource( 12 )
-
-[sub_resource type="BoxShape" id=14]
-extents = Vector3( 3.36321, 0.0630218, 1 )
-
-[sub_resource type="CubeMesh" id=9]
-material = ExtResource( 12 )
-
-[sub_resource type="BoxShape" id=10]
-extents = Vector3( 2.27864, 0.0630218, 1 )
-
-[sub_resource type="CubeMesh" id=11]
-material = ExtResource( 12 )
-
-[sub_resource type="BoxShape" id=12]
-extents = Vector3( 2.27864, 0.0630218, 1 )
+[ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_Quest2ControllerModel_Left.tscn" type="PackedScene" id=15]
+[ext_resource path="res://tools/Shovel.tscn" type="PackedScene" id=16]
 
 [sub_resource type="SpatialMaterial" id=19]
 albedo_color = Color( 0.133333, 0.478431, 0.203922, 1 )
@@ -108,6 +67,48 @@ uv1_scale = Vector3( 2.504, 23.752, 1 )
 [sub_resource type="CubeMesh" id=26]
 material = SubResource( 27 )
 
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.197845, 0.202299, 0.202507 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.282353, 0.282353, 0.282353, 1 )
+
+[sub_resource type="CubeMesh" id=5]
+material = SubResource( 4 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.209852, 0.209351, 0.188521 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=17]
+albedo_texture = ExtResource( 10 )
+uv1_scale = Vector3( 15.941, 17.283, 1 )
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 3.36321, 0.0630218, 1 )
+
+[sub_resource type="CubeMesh" id=16]
+material = ExtResource( 12 )
+
+[sub_resource type="CubeMesh" id=13]
+material = ExtResource( 12 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 3.36321, 0.0630218, 1 )
+
+[sub_resource type="CubeMesh" id=9]
+material = ExtResource( 12 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 2.27864, 0.0630218, 1 )
+
+[sub_resource type="CubeMesh" id=11]
+material = ExtResource( 12 )
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 2.27864, 0.0630218, 1 )
+
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 5 )
 
@@ -118,11 +119,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000199318, 113.954, 0.001337
 
 [node name="OQ_LeftController" parent="OQ_ARVROrigin" instance=ExtResource( 1 )]
 
-[node name="OculusQuest2TouchController_Left" parent="OQ_ARVROrigin/OQ_LeftController" instance=ExtResource( 11 )]
+[node name="Feature_Quest2ControllerModel_Left" parent="OQ_ARVROrigin/OQ_LeftController" instance=ExtResource( 15 )]
 
 [node name="OQ_RightController" parent="OQ_ARVROrigin" instance=ExtResource( 3 )]
 
-[node name="OculusQuest2TouchController_Right" parent="OQ_ARVROrigin/OQ_RightController" instance=ExtResource( 15 )]
+[node name="Feature_Quest2ControllerModel_Right" parent="OQ_ARVROrigin/OQ_RightController" instance=ExtResource( 11 )]
 
 [node name="Feature_Falling" parent="OQ_ARVROrigin" instance=ExtResource( 6 )]
 
@@ -130,77 +131,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000199318, 113.954, 0.001337
 
 [node name="Locomotion_Stick" parent="OQ_ARVROrigin" instance=ExtResource( 8 )]
 
-[node name="Lower platform" type="StaticBody" parent="."]
-transform = Transform( 314.015, 0, 0, 0, 0.998675, 0, 0, 0, 313.227, 0, 0.227377, 0 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Lower platform"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236724, 0 )
-shape = SubResource( 1 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Lower platform"]
-transform = Transform( 0.198438, 0, 0, 0, 0.239322, 0, 0, 0, 0.201777, 0.00012692, 0.239705, -0.0006818 )
-mesh = SubResource( 5 )
-material/0 = null
-
-[node name="Upper platform" type="StaticBody" parent="."]
-transform = Transform( 11.8827, 0, 0, 0, 0.210797, 0, 0, 0, 29.12, 0.00109792, 112.323, 0.00148964 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Upper platform"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0724917 )
-shape = SubResource( 2 )
-
-[node name="MeshInstance" type="MeshInstance" parent="Upper platform"]
-transform = Transform( 0.208703, 0, 0, 0, 0.219269, 0, 0, 0, 0.203521, 0.00106119, -0.0570068, -0.0857161 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 17 )
-
-[node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.917415, 0, 0, 0, 1, 0, 0, 0, 1, -0.0790213, 112.173, -8.60051 )
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
-shape = SubResource( 8 )
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
-transform = Transform( 5.49249, 0, 0, 0, 0.147736, 0, 0, 0, 1, 0, 0.0418243, 0 )
-mesh = SubResource( 16 )
-material/0 = null
-
-[node name="StaticBody4" type="StaticBody" parent="."]
-transform = Transform( 0.930283, 0, 0, 0, 1, 0, 0, 0, 1, -0.0641505, 112.173, -16.5754 )
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody4"]
-transform = Transform( 5.4236, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
-mesh = SubResource( 13 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
-transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
-shape = SubResource( 14 )
-
-[node name="StaticBody2" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.91598, 112.173, -13.3 )
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
-transform = Transform( 3.71091, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
-mesh = SubResource( 9 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
-transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
-shape = SubResource( 10 )
-
-[node name="StaticBody3" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.06725, 112.173, -13.3 )
-
-[node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
-transform = Transform( 3.71091, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
-mesh = SubResource( 11 )
-material/0 = null
-
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
-transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
-shape = SubResource( 12 )
+[node name="Shovel" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.209157, 112.755, -2.39234 )
 
 [node name="Blocks" type="Spatial" parent="."]
 script = ExtResource( 9 )
@@ -326,6 +258,78 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="Grasses/StaticBody12"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31691, 0, -2.09235 )
 shape = SubResource( 20 )
+
+[node name="Lower platform" type="StaticBody" parent="."]
+transform = Transform( 314.015, 0, 0, 0, 0.998675, 0, 0, 0, 313.227, 0, 0.227377, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Lower platform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.236724, 0 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Lower platform"]
+transform = Transform( 0.198438, 0, 0, 0, 0.239322, 0, 0, 0, 0.201777, 0.00012692, 0.239705, -0.0006818 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Upper platform" type="StaticBody" parent="."]
+transform = Transform( 11.8827, 0, 0, 0, 0.210797, 0, 0, 0, 29.12, 0.00109792, 112.323, 0.00148964 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Upper platform"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0724917 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Upper platform"]
+transform = Transform( 0.208703, 0, 0, 0, 0.219269, 0, 0, 0, 0.203521, 0.00106119, -0.0570068, -0.0857161 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 17 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 0.917415, 0, 0, 0, 1, 0, 0, 0, 1, -0.0790213, 112.173, -8.60051 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody"]
+transform = Transform( 5.49249, 0, 0, 0, 0.147736, 0, 0, 0, 1, 0, 0.0418243, 0 )
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="StaticBody4" type="StaticBody" parent="."]
+transform = Transform( 0.930283, 0, 0, 0, 1, 0, 0, 0, 1, -0.0641505, 112.173, -16.5754 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody4"]
+transform = Transform( 5.4236, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody4"]
+transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
+shape = SubResource( 14 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.91598, 112.173, -13.3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
+transform = Transform( 3.71091, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
+shape = SubResource( 10 )
+
+[node name="StaticBody3" type="StaticBody" parent="."]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.06725, 112.173, -13.3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
+transform = Transform( 3.71091, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
+transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
+shape = SubResource( 12 )
 
 [node name="OQ_UI2DLogWindow" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 113.564, 0.585041 )
