@@ -1,6 +1,6 @@
 extends Spatial
 
-const enabled = false
+const enabled = true
 
 const sand = preload("res://scenes/Sand.tscn")
 var loading_blocks: bool = true
@@ -40,18 +40,19 @@ func _ready():
 		add_block(Vector3(0, 0, -2)),
 		add_block(Vector3(0, 0, -4)),
 		add_block(Vector3(2, 0, 0)),
-		add_block(Vector3(4, 0, 0)),
 		add_block(Vector3(2, 0, -2)),
-		add_block(Vector3(4, 0, -4)),
+		add_block(Vector3(2, 0, -4)),
+		add_block(Vector3(4, 0, 0)),
 		add_block(Vector3(4, 0, -2)),
-		add_block(Vector3(2, 0, -4))
+		add_block(Vector3(4, 0, -4))
 	]
 	
 	var iter = 0
 	var offset = -2.0
 	for block in top_level_blocks: 
-		var new_block = add_block(Vector3(block.translation.x, offset, block.translation.z))
+		var new_block = add_block(Vector3(0, offset, 0))
 		added_blocks.append(new_block)
+		break
 	loading_blocks = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
