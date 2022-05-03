@@ -1,28 +1,17 @@
 extends Spatial
 
 const enabled = true
-
 const sand = preload("res://scenes/Sand.tscn")
+
 var loading_blocks: bool = true
+var top_level_offsets = []
 var top_level_blocks = []
 var added_blocks = []
 
+# config
+var amount = 20
+
 func add_block(offset: Vector3, parent: Spatial = self):
-	"""Adds a new sand block.
-	
-	Parameters
-	----------
-	offset : Vector3
-	   	The offset used in translating the sand block. Note that it will not move it to this position,
-		it will only add this offset to the current translation.
-	parent : Spatial, optional
-		The Spatial node to set the sand block. Defaults to `self`.
-		
-	Returns
-	-------
-	StaticBody
-		The new instance of the sand block.
-	"""
 	var new_block = sand.instance()
 	parent.add_child(new_block)
 	new_block.translate(offset)
@@ -35,24 +24,34 @@ func _ready():
 	for _i in range(100):
 		vr.log_warning("...")
 	
-	top_level_blocks = [
-		add_block(Vector3(0, 0, 0)),
-		add_block(Vector3(0, 0, -2)),
-		add_block(Vector3(0, 0, -4)),
-		add_block(Vector3(2, 0, 0)),
-		add_block(Vector3(2, 0, -2)),
-		add_block(Vector3(2, 0, -4)),
-		add_block(Vector3(4, 0, 0)),
-		add_block(Vector3(4, 0, -2)),
-		add_block(Vector3(4, 0, -4))
+	top_level_offsets = [
+		Vector3(0, 0, 0),
+		Vector3(0, 0, -2),
+		Vector3(0, 0, -4),
+		Vector3(2, 0, 0),
+		Vector3(2, 0, -2),
+		Vector3(2, 0, -4),
+		Vector3(4, 0, 0),
+		Vector3(4, 0, -2),
+		Vector3(4, 0, -4)
 	]
+	for offset in top_level_offsets:
+		top_level_blocks.append(
+			add_block(offset)
+		)
 	
-	var iter = 0
-	var offset = -2.0
-	for block in top_level_blocks: 
-		var new_block = add_block(Vector3(0, offset, 0))
-		added_blocks.append(new_block)
-		break
+	var iter = 0;
+	for block in top_level_blocks:
+		var offset = -2.0
+		var block_vector = top_level_offsets[iter]
+		for i in range(amount):
+			var vector_offset = block_vector
+			vector_offset.y = block_vector.y + offset
+			added_blocks.append(
+				add_block(vector_offset)
+			)
+			offset -= 2.0
+		iter += 1
 	loading_blocks = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
