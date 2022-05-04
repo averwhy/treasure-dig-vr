@@ -2,7 +2,7 @@
 
 [ext_resource path="res://OQ_Toolkit/OQ_Classes/OQClass_Tool.gd" type="Script" id=1]
 [ext_resource path="res://OQ_Toolkit/OQ_Classes/OQClass_ToolGrabController.gd" type="Script" id=2]
-[ext_resource path="res://tools/shovel.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://tools/shovel.fbx" type="PackedScene" id=3]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.0234703, 0.815432, 0.0114442 )
@@ -13,15 +13,12 @@ script = ExtResource( 1 )
 [node name="ShovelArea" type="Area" parent="."]
 script = ExtResource( 2 )
 
-[node name="OQClass_ToolGrabController" type="Spatial" parent="ShovelArea"]
-script = ExtResource( 2 )
-
 [node name="ShovelCollisionShape" type="CollisionShape" parent="ShovelArea"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.000163361, 0.610495, -0.000191316 )
 shape = SubResource( 1 )
 
-[node name="MeshInstance" type="MeshInstance" parent="ShovelArea"]
-transform = Transform( 0.0597517, 0, 0, 0, 0.0700749, 0, 0, 0, 0.0476185, 0, 0.139697, 0 )
-mesh = ExtResource( 3 )
-material/0 = null
-material/1 = null
+[node name="OQClass_ToolGrabController" type="Spatial" parent="ShovelArea"]
+script = ExtResource( 2 )
+
+[node name="shovel" parent="ShovelArea" instance=ExtResource( 3 )]
+transform = Transform( 7.29324, 0, 0, 0, 7.73117, 0, 0, 0, 5.28948, 0, 0.0742805, 0 )
