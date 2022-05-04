@@ -132,7 +132,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000199318, 113.954, 0.001337
 [node name="Locomotion_Stick" parent="OQ_ARVROrigin" instance=ExtResource( 8 )]
 
 [node name="Shovel" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.209157, 112.755, -2.39234 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.209157, 113.109, -2.80357 )
 
 [node name="Blocks" type="Spatial" parent="."]
 script = ExtResource( 9 )
