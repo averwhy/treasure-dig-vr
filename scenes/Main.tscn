@@ -342,4 +342,4 @@ transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
 shape = SubResource( 12 )
 
 [node name="OQ_UI2DLogWindow" parent="." instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 113.564, 0.585041 )
+transform = Transform( -0.999881, 0, -0.0154455, 0, 1, 0, 0.0154455, 0, -0.999881, 0.0219071, 113.564, 2.00322 )

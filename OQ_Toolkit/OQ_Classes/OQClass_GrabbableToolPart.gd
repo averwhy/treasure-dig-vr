@@ -36,3 +36,8 @@ func _ready():
 	for child in get_children():
 		if child is OQClass_ToolGrabController:
 			motion_controller = child
+
+func _on_ShovelArea_body_entered(body): # Here we're going to try to detect when it collides with a sand block
+	if body.name == "Sand":
+		vr.show_dbg_info("sand at %s" % body.translation.origin, "collided!!!!")
+		pass
