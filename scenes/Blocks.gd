@@ -21,9 +21,6 @@ func add_block(offset: Vector3, parent: Spatial = self):
 func _ready():
 	if not enabled: return
 	
-	for _i in range(100):
-		vr.log_warning("...")
-	
 	top_level_offsets = [
 		Vector3(0, 0, 0),
 		Vector3(0, 0, -2),

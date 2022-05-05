@@ -6,7 +6,7 @@
 [ext_resource path="res://OQ_Toolkit/OQ_Classes/OQClass_GrabbableToolPart.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.0234703, 0.815432, 0.0114442 )
+extents = Vector3( 0.0444584, 0.815432, 0.0114442 )
 
 [node name="Shovel" type="Spatial"]
 script = ExtResource( 1 )
@@ -23,4 +23,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.640005, 0 )
 script = ExtResource( 2 )
 
 [node name="shovel" parent="ShovelArea" instance=ExtResource( 3 )]
-transform = Transform( 7.29324, 0, 0, 0, 7.73117, 0, 0, 0, 5.28948, 0, 0.0742805, 0 )
+transform = Transform( -7.29324, 6.7588e-07, 0, -6.37595e-07, -7.73117, 0, 0, 0, 5.28948, -8.18435e-08, 1.01046, 0 )
