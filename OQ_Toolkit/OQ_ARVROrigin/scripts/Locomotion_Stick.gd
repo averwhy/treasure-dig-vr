@@ -5,9 +5,9 @@ export var debug_information := false;
 
 export var dead_zone = 0.125;
 
-export var move_speed = 1.0;
+export var move_speed = 2.5;
 
-export var enable_vignette = false;
+export var enable_vignette = true;
 export var vignette_radius_0 = 0.5;
 export var vignette_radius_1 = 0.8;
 export var vignette_color = Color(0.0,0.0,0.0,1.0);

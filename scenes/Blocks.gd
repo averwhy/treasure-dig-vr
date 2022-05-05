@@ -41,7 +41,7 @@ func _ready():
 	for block in top_level_blocks:
 		var offset = -2.0
 		var block_vector = top_level_offsets[iter]
-		for i in range(amount):
+		for _i in range(amount):
 			var vector_offset = block_vector
 			vector_offset.y = block_vector.y + offset
 			added_blocks.append(
