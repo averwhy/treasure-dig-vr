@@ -6,16 +6,17 @@
 [ext_resource path="res://OQ_Toolkit/OQ_Classes/OQClass_GrabbableToolPart.gd" type="Script" id=4]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 0.0757944, 1.01614, 0.0114442 )
+extents = Vector3( 0.0757944, 1.07656, 0.0114442 )
 
 [node name="Shovel" type="Spatial"]
 script = ExtResource( 1 )
 
 [node name="ShovelArea" type="Area" parent="."]
+transform = Transform( 0.615157, 0, 0, 0, 0.638077, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 4 )
 
 [node name="ShovelCollisionShape" type="CollisionShape" parent="ShovelArea"]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.000163361, 0.536723, -0.000191316 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.000163361, 0.572538, -0.00457336 )
 shape = SubResource( 1 )
 
 [node name="OQClass_ToolGrabController" type="Spatial" parent="ShovelArea"]
@@ -25,5 +26,4 @@ script = ExtResource( 2 )
 [node name="shovel" parent="ShovelArea" instance=ExtResource( 3 )]
 transform = Transform( -7.29324, 6.7588e-07, 0, -6.37595e-07, -7.73117, 0, 0, 0, 5.28948, -8.18435e-08, 1.01046, 0 )
 
-[connection signal="body_entered" from="ShovelArea" to="ShovelArea" method="_on_ShovelArea_body_entered"]
 [connection signal="body_exited" from="ShovelArea" to="ShovelArea" method="_on_ShovelArea_body_exited"]

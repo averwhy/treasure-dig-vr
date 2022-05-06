@@ -70,6 +70,7 @@ config/icon="res://icon.png"
 [autoload]
 
 vr="*res://OQ_Toolkit/vr_autoload.gd"
+player="*res://scripts/Player.gd"
 
 [gdnative]
 

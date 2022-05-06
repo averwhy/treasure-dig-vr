@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sand3.ogg-7be53bfbe81c0dc69dab07f1813468b9.oggstr"
+
+[deps]
+
+source_file="res://sounds/sand3.ogg"
+dest_files=[ "res://.import/sand3.ogg-7be53bfbe81c0dc69dab07f1813468b9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -39,8 +39,19 @@ func _ready():
 
 var sand_collision_count = {}
 var sand_integrity = 5
-func _on_ShovelArea_body_entered(body): 
-	pass
+var random = RandomNumberGenerator.new()
+const sand_sounds = [
+	preload("res://sounds/sand1.ogg"),
+	preload("res://sounds/sand2.ogg"),
+	preload("res://sounds/sand3.ogg"),
+	preload("res://sounds/sand4.ogg"),
+	preload("res://sounds/sand5.ogg"),
+]
+
+func random_sand_sound():
+	random.randomize()
+	var sound = sand_sounds[random.randi_range(0,4)]
+	
 
 func _on_ShovelArea_body_exited(body): # Here we detect when it collides with a sand block
 	if not ("Sand" in body.name):
@@ -55,4 +66,3 @@ func _on_ShovelArea_body_exited(body): # Here we detect when it collides with a 
 	else:
 		# adds that sand block to the dictionary with the default integrity
 		sand_collision_count[body.name] = sand_integrity
-	vr.show_dbg_info("%s" % body.name, "integrity = %s" % sand_collision_count.get(body.name))

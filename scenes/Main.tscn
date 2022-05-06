@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://OQ_Toolkit/OQ_LeftController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRCamera.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://OQ_Toolkit/OQ_UI2D/OQ_UI2DLogWindow.tscn" type="PackedScene" id=14]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_Quest2ControllerModel_Left.tscn" type="PackedScene" id=15]
 [ext_resource path="res://tools/Shovel.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Pit Walls.gd" type="Script" id=17]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_ToolGrab.tscn" type="PackedScene" id=18]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_RigidBodyGrab.tscn" type="PackedScene" id=19]
 
@@ -118,6 +119,7 @@ script = ExtResource( 5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000199318, 113.954, 0.00133753 )
 
 [node name="OQ_ARVRCamera" parent="OQ_ARVROrigin" instance=ExtResource( 2 )]
+fov = 76.0
 
 [node name="OQ_LeftController" parent="OQ_ARVROrigin" instance=ExtResource( 1 )]
 
@@ -146,6 +148,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119247, 113.112, -2.80396 )
 
 [node name="Blocks" type="Spatial" parent="."]
 script = ExtResource( 9 )
+
+[node name="Pit Walls" type="Spatial" parent="."]
+script = ExtResource( 17 )
 
 [node name="Grasses" type="Spatial" parent="."]
 
