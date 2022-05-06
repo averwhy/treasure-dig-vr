@@ -26,3 +26,4 @@ script = ExtResource( 2 )
 transform = Transform( -7.29324, 6.7588e-07, 0, -6.37595e-07, -7.73117, 0, 0, 0, 5.28948, -8.18435e-08, 1.01046, 0 )
 
 [connection signal="body_entered" from="ShovelArea" to="ShovelArea" method="_on_ShovelArea_body_entered"]
+[connection signal="body_exited" from="ShovelArea" to="ShovelArea" method="_on_ShovelArea_body_exited"]

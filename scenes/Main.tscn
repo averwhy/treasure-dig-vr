@@ -142,7 +142,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000199318, 113.954, 0.001337
 [node name="Locomotion_Stick" parent="OQ_ARVROrigin" instance=ExtResource( 8 )]
 
 [node name="Shovel" parent="." instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119162, 113.109, -2.80357 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119247, 113.112, -2.80396 )
 
 [node name="Blocks" type="Spatial" parent="."]
 script = ExtResource( 9 )
@@ -182,7 +182,7 @@ mesh = SubResource( 29 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Grasses/StaticBody13"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31691, 0, -2.09235 )
+transform = Transform( 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 0, 1, -2.31691, 0, -2.09235 )
 shape = SubResource( 31 )
 
 [node name="StaticBody14" type="StaticBody" parent="Grasses"]
@@ -282,7 +282,7 @@ mesh = SubResource( 5 )
 material/0 = null
 
 [node name="Upper platform" type="StaticBody" parent="."]
-transform = Transform( 11.8827, 0, 0, 0, 0.210797, 0, 0, 0, 29.12, 0.00109792, 112.323, 0.00148964 )
+transform = Transform( 11.8827, 0, 0, 0, 0.210797, 0, 0, 0, 29.12, 0.00109792, 112.275, 0.00148964 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Upper platform"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0724917 )
@@ -294,7 +294,7 @@ mesh = SubResource( 3 )
 material/0 = SubResource( 17 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 0.917415, 0, 0, 0, 1, 0, 0, 0, 1, -0.0790213, 112.173, -8.60051 )
+transform = Transform( 0.917415, 0, 0, 0, 1, 0, 0, 0, 1, -0.0790213, 112.125, -8.60051 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
@@ -306,7 +306,7 @@ mesh = SubResource( 16 )
 material/0 = null
 
 [node name="StaticBody4" type="StaticBody" parent="."]
-transform = Transform( 0.930283, 0, 0, 0, 1, 0, 0, 0, 1, -0.0641505, 112.173, -16.5754 )
+transform = Transform( 0.930283, 0, 0, 0, 1, 0, 0, 0, 1, -0.0641505, 112.125, -16.5754 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody4"]
 transform = Transform( 5.4236, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
@@ -318,7 +318,7 @@ transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
 shape = SubResource( 14 )
 
 [node name="StaticBody2" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.91598, 112.173, -13.3 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.91598, 112.125, -13.3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody2"]
 transform = Transform( 3.71091, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )
@@ -330,7 +330,7 @@ transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
 shape = SubResource( 10 )
 
 [node name="StaticBody3" type="StaticBody" parent="."]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.06725, 112.173, -13.3 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.06725, 112.125, -13.3 )
 
 [node name="MeshInstance" type="MeshInstance" parent="StaticBody3"]
 transform = Transform( 3.71091, 0, 0, 0, 0.0637514, 0, 0, 0, 1, 0, 0.128586, 0 )

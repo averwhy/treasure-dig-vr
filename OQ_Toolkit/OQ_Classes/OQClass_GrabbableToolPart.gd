@@ -37,7 +37,22 @@ func _ready():
 		if child is OQClass_ToolGrabController:
 			motion_controller = child
 
-func _on_ShovelArea_body_entered(body): # Here we're going to try to detect when it collides with a sand block
-	if body.name == "Sand":
-		vr.show_dbg_info("sand at %s" % body.translation.origin, "collided!!!!")
-		pass
+var sand_collision_count = {}
+var sand_integrity = 5
+func _on_ShovelArea_body_entered(body): 
+	pass
+
+func _on_ShovelArea_body_exited(body): # Here we detect when it collides with a sand block
+	if not ("Sand" in body.name):
+		return # Ignore all other staticbodys since we only want sand
+	if sand_collision_count.has(body.name):
+		var current_count = sand_collision_count.get(body.name)
+		var new_count = current_count - 1
+		sand_collision_count[body.name] = new_count
+		if new_count == 0:
+			# Destroy block!
+			body.queue_free() # queue's node for deletion at end of current frame
+	else:
+		# adds that sand block to the dictionary with the default integrity
+		sand_collision_count[body.name] = sand_integrity
+	vr.show_dbg_info("%s" % body.name, "integrity = %s" % sand_collision_count.get(body.name))
