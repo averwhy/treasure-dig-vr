@@ -1,6 +1,6 @@
 extends Node
 
-export var money = 0;
+var money = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +16,7 @@ func set_money(amount: int):
 	money = amount
 
 func update_screen_balance():
-	vr.show_dbg_info("Money:", "$%s" % money)
+	vr.show_dbg_info("Money", "$%s" % money)
 
 var last_iter = null;
 func _process(delta):

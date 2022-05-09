@@ -48,10 +48,12 @@ const sand_sounds = [
 	preload("res://sounds/sand5.ogg"),
 ]
 
-func random_sand_sound():
-	random.randomize()
-	var sound = sand_sounds[random.randi_range(0,4)]
-	
+#func random_sand_sound(body):
+#	random.randomize()
+#	var sound: AudioStreamOGGVorbis = sand_sounds[random.randi_range(0,4)]
+#	var stream = body.get_child(2)
+#	stream.stream = sound
+#	stream.play()
 
 func _on_ShovelArea_body_exited(body): # Here we detect when it collides with a sand block
 	if not ("Sand" in body.name):
@@ -63,6 +65,8 @@ func _on_ShovelArea_body_exited(body): # Here we detect when it collides with a 
 		if new_count == 0:
 			# Destroy block!
 			body.queue_free() # queue's node for deletion at end of current frame
+			player.add_money(2) # add money to players balance
+			
 	else:
 		# adds that sand block to the dictionary with the default integrity
 		sand_collision_count[body.name] = sand_integrity

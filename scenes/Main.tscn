@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://OQ_Toolkit/OQ_LeftController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRCamera.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_Quest2ControllerModel_Right.tscn" type="PackedScene" id=11]
 [ext_resource path="res://resources/Wood.tres" type="Material" id=12]
 [ext_resource path="res://resources/roblox_grass.png" type="Texture" id=13]
-[ext_resource path="res://OQ_Toolkit/OQ_UI2D/OQ_UI2DLogWindow.tscn" type="PackedScene" id=14]
 [ext_resource path="res://OQ_Toolkit/OQ_ARVRController/Feature_Quest2ControllerModel_Left.tscn" type="PackedScene" id=15]
 [ext_resource path="res://tools/Shovel.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/Pit Walls.gd" type="Script" id=17]
@@ -345,6 +344,3 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody3"]
 transform = Transform( 1.61399, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12867, 0 )
 shape = SubResource( 12 )
-
-[node name="OQ_UI2DLogWindow" parent="." instance=ExtResource( 14 )]
-transform = Transform( -0.999881, 0, -0.0154455, 0, 1, 0, 0.0154455, 0, -0.999881, 0.0219071, 113.564, 2.00322 )

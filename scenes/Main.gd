@@ -13,6 +13,6 @@ func _physics_process(_dt):
 		var player = self.get_node("OQ_ARVROrigin")
 		var shovel = self.get_node("Shovel")
 		player.transform.origin = default_player_origin # does the actual teleporting
-		for c in shovel.get_children():
-			c.transform.origin = default_shovel_origin
+		
+		#doesnt work \/ \/
 		shovel.transform.origin = default_shovel_origin
