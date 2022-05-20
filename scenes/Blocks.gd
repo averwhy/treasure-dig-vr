@@ -9,7 +9,7 @@ var top_level_blocks = []
 var added_blocks = []
 
 # config
-var amount = 40
+var amount = 100
 
 func add_block(offset: Vector3, parent: Spatial = self):
 	var new_block = sand.instance()
