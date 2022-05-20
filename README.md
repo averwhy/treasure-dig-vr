@@ -13,10 +13,10 @@ A VR game I'm making for my senior project using Godot Engine.
 ## Premise
 The idea of the game is inspired by [Treasure Hunting Simulator](https://www.roblox.com/games/1345139196/Treasure-Hunt-Simulator) on Roblox.
 
-The player digs down and is looking for chests that reward with a currency (TBD). The deeper you go, the harder it gets to dig, but the better the rewards are.
+The player digs down using a shovel and gets paid for each sand block they mine! This is a very early state of the game so there isn't many features.
 
 
 ## How do i play?
-Currently, the game is unavailable. It's not quite in a working state. Once it is, it will be published on Oculus Quest App Labs and a link will be put here.
+In the releases tab is the `.apk` file. You can download this and install it to your headset using Sidequest!
 
 Keep on eye on the 'App lab' badge to quickly know if the game is on app labs yet. It will also be linked in [the releases tab for this repo.](https://github.com/averwhy/treasure-dig-vr/releases)
