@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/github/license/averwhy/treasure-dig-vr?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/averwhy/treasure-dig-vr?style=flat-square)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/averwhy/treasure-dig-vr?style=flat-square)
-![Maintenance](https://img.shields.io/maintenance/yes/2022?style=flat-square)
+![Maintenance](https://img.shields.io/maintenance/no/2022?style=flat-square)
 ![GitHub Repo stars](https://img.shields.io/github/stars/averwhy/treasure-dig-vr?color=e3b341&style=flat-square)
 ![App labs](https://img.shields.io/badge/app%20lab-no-red?style=flat-square&logo=oculus)
 
